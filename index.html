@@ -15,7 +15,7 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f8f9fa;
+            background-color: #f5f5f5;
         }
 
         .container {
@@ -26,14 +26,14 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #374151 100%);
+            background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
             color: white;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         .header-content {
@@ -43,10 +43,36 @@
             flex-wrap: wrap;
         }
 
-        .logo {
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-image {
+            width: 80px;
+            height: 80px;
+            background: #1a2332;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #fbbf24;
+            color: #a8b2c1;
+            letter-spacing: 1px;
+        }
+
+        .logo-sub {
+            font-size: 1rem;
+            color: #c0c8d4;
+            letter-spacing: 2px;
         }
 
         .contact-info {
@@ -54,26 +80,32 @@
             align-items: center;
             gap: 20px;
             font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-info span {
+            color: #c0c8d4;
         }
 
         .phone {
-            background: #fbbf24;
-            color: #1e3a8a;
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            color: white;
             padding: 8px 16px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
         }
 
         .phone:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.5);
         }
 
         /* Navigation */
         nav {
-            background: rgba(30, 58, 138, 0.95);
+            background: rgba(26, 35, 50, 0.95);
             padding: 0.5rem 0;
         }
 
@@ -89,7 +121,7 @@
         }
 
         .nav-links a {
-            color: white;
+            color: #c0c8d4;
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 25px;
@@ -98,14 +130,14 @@
         }
 
         .nav-links a:hover, .nav-links a.active {
-            background: #fbbf24;
-            color: #1e3a8a;
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
             transform: translateY(-2px);
         }
 
         /* Main Content */
         main {
-            margin-top: 120px;
+            margin-top: 150px;
         }
 
         .page-section {
@@ -120,8 +152,8 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(55, 65, 81, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23374151" width="1200" height="600"/><polygon fill="%231e3a8a" points="0,600 400,200 800,400 1200,100 1200,600"/></svg>');
+            background: linear-gradient(rgba(26, 35, 50, 0.85), rgba(44, 62, 80, 0.85)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%232c3e50" width="1200" height="600"/><polygon fill="%231a2332" points="0,600 400,200 800,400 1200,100 1200,600"/></svg>');
             background-size: cover;
             background-position: center;
             color: white;
@@ -132,14 +164,16 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: #a8b2c1;
         }
 
         .tagline {
             font-size: 1.5rem;
             margin-bottom: 30px;
-            color: #fbbf24;
+            color: #4a90e2;
             font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .hero-description {
@@ -148,6 +182,7 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            color: #c0c8d4;
         }
 
         .cta-buttons {
@@ -170,19 +205,20 @@
         }
 
         .btn-primary {
-            background: #fbbf24;
-            color: #1e3a8a;
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
             color: white;
-            border: 2px solid white;
+            border: 2px solid #a8b2c1;
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
 
         /* Content Sections */
@@ -199,15 +235,16 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            border-top: 4px solid #4a90e2;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
 
         .card h3 {
-            color: #1e3a8a;
+            color: #2c3e50;
             margin-bottom: 15px;
             font-size: 1.4rem;
         }
@@ -220,23 +257,77 @@
         }
 
         .service-item {
-            background: linear-gradient(135deg, #1e3a8a, #374151);
+            background: linear-gradient(135deg, #2c3e50, #1a2332);
             color: white;
             padding: 25px;
             border-radius: 10px;
             text-align: center;
             transition: all 0.3s ease;
+            border: 2px solid #4a90e2;
         }
 
         .service-item:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+            box-shadow: 0 10px 25px rgba(74, 144, 226, 0.3);
+            border-color: #a8b2c1;
         }
 
         .service-item h4 {
-            color: #fbbf24;
+            color: #4a90e2;
             margin-bottom: 10px;
             font-size: 1.2rem;
+        }
+
+        /* ASE Badge */
+        .ase-badge {
+            background: white;
+            border: 3px solid #2c3e50;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+        }
+
+        .ase-text-top {
+            font-size: 12px;
+            line-height: 1;
+        }
+
+        .ase-text-middle {
+            font-size: 16px;
+            line-height: 1;
+            margin: 2px 0;
+        }
+
+        .ase-text-bottom {
+            font-size: 10px;
+            line-height: 1;
+        }
+
+        .certification-section {
+            background: linear-gradient(135deg, #e8ecf0 0%, #f5f7fa 100%);
+            padding: 40px 0;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .certification-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .certification-text {
+            max-width: 400px;
         }
 
         /* Contact Section */
@@ -253,23 +344,24 @@
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #4a90e2;
         }
 
         .contact-card h4 {
-            color: #1e3a8a;
+            color: #2c3e50;
             margin-bottom: 15px;
             font-size: 1.3rem;
         }
 
         .contact-card .icon {
             font-size: 2rem;
-            color: #fbbf24;
+            color: #4a90e2;
             margin-bottom: 15px;
         }
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, #1e3a8a 0%, #374151 100%);
+            background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
             color: white;
             text-align: center;
             padding: 30px 0;
@@ -283,8 +375,12 @@
         }
 
         .footer-section h4 {
-            color: #fbbf24;
+            color: #4a90e2;
             margin-bottom: 15px;
+        }
+
+        .footer-section p {
+            color: #c0c8d4;
         }
 
         /* Responsive Design */
@@ -292,6 +388,11 @@
             .header-content {
                 flex-direction: column;
                 gap: 15px;
+            }
+
+            .logo-section {
+                flex-direction: column;
+                text-align: center;
             }
 
             .nav-links {
@@ -313,7 +414,7 @@
             }
 
             main {
-                margin-top: 160px;
+                margin-top: 180px;
             }
         }
 
@@ -326,8 +427,17 @@
                 padding: 0 15px;
             }
 
+            .logo-image {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logo-main {
+                font-size: 1.4rem;
+            }
+
             main {
-                margin-top: 180px;
+                margin-top: 200px;
             }
         }
     </style>
@@ -336,9 +446,16 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">Peterson Auto Solutions</div>
+                <div class="logo-section">
+                    <img src="peterson-auto-logo.png" alt="Peterson Auto Solutions Logo" class="logo-image">
+                    <div class="logo-text">
+                        <div class="logo-main">PETERSON</div>
+                        <div class="logo-sub">AUTO SOLUTIONS</div>
+                    </div>
+                </div>
                 <div class="contact-info">
                     <span>📍 San Tan Valley, AZ</span>
+                    <span>📧 petersonautosolutions@gmail.com</span>
                     <a href="tel:602-526-3561" class="phone">📞 (602) 526-3561</a>
                 </div>
             </div>
@@ -388,13 +505,32 @@
                     </div>
                 </div>
             </div>
+
+            <!-- ASE Certification Section -->
+            <div class="certification-section">
+                <div class="container">
+                    <div class="certification-content">
+                        <div class="ase-badge">
+                            <div class="ase-text-top">ASE</div>
+                            <div class="ase-text-middle">CERTIFIED</div>
+                            <div class="ase-text-bottom">TECHNICIANS</div>
+                        </div>
+                        <div class="certification-text">
+                            <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.8rem;">ASE Certified Excellence</h3>
+                            <p style="color: #4b5563; font-size: 1.1rem; line-height: 1.6;">
+                                Our ASE certified technicians have proven their expertise through rigorous testing and ongoing education. This certification ensures you receive the highest quality automotive service from qualified professionals you can trust.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- About Page -->
         <section id="about" class="page-section">
             <div class="container">
                 <div style="text-align: center; margin-bottom: 50px;">
-                    <h2 style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px;">About Peterson Auto Solutions</h2>
+                    <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 20px;">About Peterson Auto Solutions</h2>
                     <p style="font-size: 1.2rem; color: #6b7280; max-width: 800px; margin: 0 auto;">
                         Your trusted automotive service partner in San Tan Valley, Arizona
                     </p>
@@ -406,6 +542,10 @@
                         <p>With over 25 years of experience in the automotive industry, we've seen it all and fixed it all. Our extensive experience means we can diagnose problems quickly and provide lasting solutions.</p>
                     </div>
                     <div class="card">
+                        <div class="ase-badge" style="width: 60px; height: 60px; margin-bottom: 15px;">
+                            <div class="ase-text-top" style="font-size: 8px;">ASE</div>
+                            <div class="ase-text-middle" style="font-size: 10px;">CERT</div>
+                        </div>
                         <h3>🏆 ASE Certified Technicians</h3>
                         <p>Choose our ASE certified technicians for your automotive needs. Our team maintains the highest industry standards and stays current with the latest automotive technologies and repair techniques.</p>
                     </div>
@@ -416,7 +556,7 @@
                 </div>
 
                 <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 40px; text-align: center;">
-                    <h3 style="color: #1e3a8a; margin-bottom: 20px; font-size: 1.8rem;">Why Choose Peterson Auto Solutions?</h3>
+                    <h3 style="color: #2c3e50; margin-bottom: 20px; font-size: 1.8rem;">Why Choose Peterson Auto Solutions?</h3>
                     <p style="font-size: 1.1rem; line-height: 1.8; color: #4b5563; max-width: 800px; margin: 0 auto;">
                         At Peterson Auto Solutions, we believe that exceptional automotive service is built on three pillars: expertise, integrity, and customer care. Our experienced team combines decades of knowledge with modern diagnostic tools to provide accurate, efficient repairs. We're committed to transparent pricing, clear communication, and treating your vehicle with the same care we'd give our own.
                     </p>
@@ -428,7 +568,7 @@
         <section id="services" class="page-section">
             <div class="container">
                 <div style="text-align: center; margin-bottom: 50px;">
-                    <h2 style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px;">Our Services</h2>
+                    <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 20px;">Our Services</h2>
                     <p style="font-size: 1.2rem; color: #6b7280;">
                         Comprehensive automotive services to keep your vehicle running smoothly
                     </p>
@@ -462,7 +602,7 @@
                 </div>
 
                 <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 40px; text-align: center;">
-                    <h3 style="color: #1e3a8a; margin-bottom: 20px;">And Much More!</h3>
+                    <h3 style="color: #2c3e50; margin-bottom: 20px;">And Much More!</h3>
                     <p style="font-size: 1.1rem; line-height: 1.8; color: #4b5563; margin-bottom: 30px;">
                         Our comprehensive automotive services cover everything your vehicle needs. From engine repair to transmission service, air conditioning to exhaust systems - we're your one-stop shop for automotive care in San Tan Valley.
                     </p>
@@ -475,7 +615,7 @@
         <section id="contact" class="page-section">
             <div class="container">
                 <div style="text-align: center; margin-bottom: 50px;">
-                    <h2 style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px;">Contact Us</h2>
+                    <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 20px;">Contact Us</h2>
                     <p style="font-size: 1.2rem; color: #6b7280;">
                         Ready to schedule service? We're here to help!
                     </p>
@@ -483,9 +623,15 @@
 
                 <div class="contact-info-grid">
                     <div class="contact-card">
+                        <div class="icon">📧</div>
+                        <h4>Email Us</h4>
+                        <p><a href="mailto:petersonautosolutions@gmail.com" style="color: #2c3e50; text-decoration: none; font-weight: bold;">petersonautosolutions@gmail.com</a></p>
+                        <p style="color: #6b7280; margin-top: 10px;">Send us an email for quotes and inquiries</p>
+                    </div>
+                    <div class="contact-card">
                         <div class="icon">📞</div>
                         <h4>Call Us</h4>
-                        <p><a href="tel:602-526-3561" style="color: #1e3a8a; text-decoration: none; font-weight: bold;">(602) 526-3561</a></p>
+                        <p><a href="tel:602-526-3561" style="color: #2c3e50; text-decoration: none; font-weight: bold;">(602) 526-3561</a></p>
                         <p style="color: #6b7280; margin-top: 10px;">Call us today to schedule your service appointment</p>
                     </div>
                     <div class="contact-card">
@@ -502,8 +648,8 @@
                     </div>
                 </div>
 
-                <div style="background: linear-gradient(135deg, #1e3a8a, #374151); color: white; padding: 40px; border-radius: 15px; text-align: center; margin-top: 40px;">
-                    <h3 style="color: #fbbf24; margin-bottom: 20px; font-size: 1.8rem;">Ready to Get Started?</h3>
+                <div style="background: linear-gradient(135deg, #2c3e50, #1a2332); color: white; padding: 40px; border-radius: 15px; text-align: center; margin-top: 40px;">
+                    <h3 style="color: #4a90e2; margin-bottom: 20px; font-size: 1.8rem;">Ready to Get Started?</h3>
                     <p style="font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">
                         Don't wait until small problems become big expenses. Contact Peterson Auto Solutions today for fast, friendly, and affordable automotive service you can trust.
                     </p>
@@ -523,6 +669,7 @@
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <p>📞 (602) 526-3561</p>
+                    <p>📧 petersonautosolutions@gmail.com</p>
                     <p>📍 San Tan Valley, AZ</p>
                 </div>
                 <div class="footer-section">
@@ -531,7 +678,7 @@
                     <p>25+ Years Experience</p>
                 </div>
             </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+            <div style="border-top: 1px solid rgba(192, 200, 212, 0.2); padding-top: 20px;">
                 <p>&copy; 2025 Peterson Auto Solutions. All rights reserved.</p>
             </div>
         </div>
@@ -539,32 +686,25 @@
 
     <script>
         function showPage(pageId, linkElement) {
-            // Hide all pages
             const pages = document.querySelectorAll('.page-section');
             pages.forEach(page => page.classList.remove('active'));
             
-            // Show selected page
             document.getElementById(pageId).classList.add('active');
             
-            // Update navigation
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => link.classList.remove('active'));
             linkElement.classList.add('active');
             
-            // Scroll to top
             window.scrollTo(0, 0);
         }
 
-        // Smooth scrolling for internal links
         document.addEventListener('click', function(e) {
             if (e.target.matches('a[href^="#"]')) {
                 e.preventDefault();
             }
         });
 
-        // Add some interactive effects
         document.addEventListener('DOMContentLoaded', function() {
-            // Add hover effects to cards
             const cards = document.querySelectorAll('.card, .service-item, .contact-card');
             cards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
